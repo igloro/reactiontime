@@ -8,13 +8,13 @@ body
 
 html, body
 {
+	min-width: 300px;
 	width: 100%;
 	height: 100%;
 }
 
 #app
 {
-	height: 300px;
 	text-align: center;
 	line-height: 30px;
 
@@ -26,11 +26,23 @@ html, body
 	-moz-user-select: none;
 	-ms-user-select: none; 
 	user-select: none; 
+
+	width: 100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	bottom:0px;
 }
 
 #inner
 {
-	line-height: 270px;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -15px;
+    width: 500px;
+    font-size: 29px;
 }
 
 .isGetready 
@@ -43,4 +55,15 @@ html, body
 {
 	background: #00c100;
 	color: #FFF;
+}
+
+@media (max-width: 690px) 
+{
+	#inner
+	{
+		width: 300px;
+		max-width: 100%;
+		margin-left: -150px;
+		font-size: 1em;
+	}
 }
